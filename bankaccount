@@ -1,0 +1,39 @@
+class BankAccount {
+    private String name;
+    private int age;
+    private int Accountnumber;
+    private double Balance;
+    
+    public BankAccount(String name,int age ,int Accountnumber , double Balance){
+       this.name = name;
+       this.age = age;
+       this.Accountnumber = Accountnumber;
+       this.Balance = Balance;
+       
+       
+    }
+    
+    public void deposit(double amount){
+        Balance += amount;
+    }
+    public void displayAccountSummary(){
+        System.out.println("Account Summary");
+        System.out.println("Name:"+name);
+        System.out.println("Age:"+age);
+        System.out.println("Account Number"+Accountnumber);
+        System.out.println("Balance:"+ Balance);
+    }
+    public static void main(String[] args)  {
+        BankAccount myAccount = new BankAccount("Jay",26,123456789,1000.00);
+        myAccount.deposit(4300.00);
+        myAccount.deposit(5500.00);
+        myAccount.displayAccountSummary();
+        
+        
+        
+        
+        
+        
+    }
+    
+}
